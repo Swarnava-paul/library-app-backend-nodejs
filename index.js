@@ -12,7 +12,7 @@ const userRouter = require('./routes/route.user');// user Router
 const authenticationMiddleware = require("./middleware/middleware.Authentication")
 
 const server = express(); // express server
-server.use(cors('*'))
+server.use(cors('https://library-app-front-end.netlify.app/'))
 server.use('/book',authenticationMiddleware,LibraryRouter);
 
 server.use('/user',userRouter);
